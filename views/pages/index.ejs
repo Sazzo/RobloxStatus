@@ -23,6 +23,7 @@
         <div class="statuses">
           <% status.forEach(({url, name, online}) => { %>
             <a style="text-decoration: none; color: #bbb" href="<%- url %>"><p><%= name %>: <%- online ? `<span style='color: #70ff8a'>Online (${online}ms)</span>` : `<span style='color: #ff7070'>Offline</span>` %></p></a>
+          <% }) %>
           <% if(!online) { %>
           <h3>Why is a Roblox service offline?</h3>
           <p>Possible Reasons:</p>
@@ -30,7 +31,6 @@
           <br>
           2.Server crash (In this case, there will always be an error when trying to access Roblox)
           <% } %>
-          <% }) %>
         </div>
         <p class="footer">Website by <a class="footer link" href="https://github.com/Sazzo">BeeCoding and FelipeSazz</a></p>
         <a class="footer link" href="https://github.com/Sazzo/RobloxStatus">Source Code</a>
