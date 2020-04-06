@@ -2,6 +2,7 @@
     {"name":"Main Webserver","url":"https://roblox.com/"},
     {"name":"Games List","url":"https://games.roblox.com/"},
     {"name":"Games Join","url":"https://gamejoin.roblox.com/"},
+    {"name":"Games Datastore API","url":"https://gamepersistence.roblox.com/"},
     {"name":"Main API","url":"https://api.roblox.com"},
     {"name":"Auth (Sign in, Sign Up)","url":"https://auth.roblox.com"},
     {"name":"Devforum","url":"https://devforum.roblox.com/"},
