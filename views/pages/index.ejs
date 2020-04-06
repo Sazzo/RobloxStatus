@@ -22,8 +22,9 @@
         <h1 class="header">Roblox Status</h1>
         <div class="statuses">
           <% status.forEach(({url, name, online}) => { %>
-            <a style="text-decoration: none; color: #bbb" href="<%- url %>"><p><%= name %>: <%- online ? `<span style='color: #70ff8a'>Online (${online}ms)</span>` : `<span style='color: #ff7070'>Offline</span>` %></p><br>
+            <a style="text-decoration: none; color: #bbb" href="<%- url %>"><p><%= name %>: <%- online ? `<span style='color: #70ff8a'>Online (${online}ms)</span>` : `<span style='color: #ff7070'>Offline</span>` %></p>
             <% if(online > 400) { %>
+            <br>
             <span style="color: #ff7070">The <%= name %> service may be unstable.</span>
             <% } %>
             </a>
