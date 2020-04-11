@@ -4,10 +4,20 @@ let status = []
 let servers = require('./servers.json')
 
 async function poll () {
-  status = await Promise.all(servers.map(async ({url, name}) => {
-    let response = await rp.head({url, simple: false, resolveWithFullResponse: true, timeout: 5000, time: true, headers: { 'User-Agent': 'github.com/Sazzo/RobloxStatus' }}).catch(e => e)
-    let online = (response.statusCode === 200 || response.statusCode === 404 || response.statusCode === 403 ? response.elapsedTime : false)
-    return {url, name, online}
+  status = await Promise.all(servers.map(async ({url, name, type}) => {
+    let response = await axios.get(url).catch(e => e)
+    switch(type) {
+      case "api":
+        online = (response.data.message === "OK" ? true : false)
+      break;
+      case "website":
+        online = (response.status === 200 ? true : false)
+      break;
+      case "star":
+        online = true
+      break;
+    }
+    return {url, name, online, type}
   }))
 }
 
