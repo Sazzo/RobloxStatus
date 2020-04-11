@@ -2,7 +2,7 @@ const axios = require('axios')
 
 let status = []
 let servers = require('./servers.json')
-let online = ()
+let online = false
 
 async function poll () {
   status = await Promise.all(servers.map(async ({url, name, type}) => {
