@@ -6,10 +6,7 @@ let servers = require('./servers.json')
 async function poll () {
   status = await Promise.all(servers.map(async ({url, name}) => {
     let response = await axios.get(url).catch(e => e)
-    let online = (/* response.data.message === "OK" ? response.status : false */ false)
-    if(response.data.message) {
-    console.log(response.data.message)
-    }
+    let online = (response.data.message === "OK" || response.status === "200" || response.status === "404" ? response.status : false)
     return {url, name, online}
     
   }))
