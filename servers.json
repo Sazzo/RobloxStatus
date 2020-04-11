@@ -1,13 +1,13 @@
 [
-    {"name":"Main Webserver","url":"https://roblox.com/"},
-    {"name":"Games List","url":"https://games.roblox.com/"},
-    {"name":"Games Join","url":"https://gamejoin.roblox.com/"},
-    {"name":"Games Datastore API","url":"https://gamepersistence.roblox.com/"},
-    {"name":"Main API","url":"https://api.roblox.com"},
-    {"name":"Auth (Sign in, Sign Up)","url":"https://auth.roblox.com"},
-    {"name":"Devforum","url":"https://devforum.roblox.com/"},
-    {"name":"Documentation","url":"https://developer.roblox.com"},
-    {"name":"Catalog API","url":"https://catalog.roblox.com"},
-    {"name":"Files Uploads API","url":"https://publish.roblox.com"},
-    {"name":"Thumbnails API","url":"https://thumbnails.roblox.com"}
+    {"name":"Main Webserver","url":"https://roblox.com/","type":"website"},
+    {"name":"Games List","url":"https://games.roblox.com/","type":"api"},
+    {"name":"Games Join","url":"https://gamejoin.roblox.com/","type":"api"},
+    {"name":"Games Datastore API","url":"https://gamepersistence.roblox.com/","type":"api"},
+    {"name":"Main API","url":"https://api.roblox.com","type":"api"},
+    {"name":"Auth (Sign in, Sign Up)","url":"https://auth.roblox.com","type":"api"},
+    {"name":"Devforum","url":"https://devforum.roblox.com/","type":"website"},
+    {"name":"Documentation","url":"https://developer.roblox.com","type":"website"},
+    {"name":"Catalog API","url":"https://catalog.roblox.com","type":"api"},
+    {"name":"Files Uploads API","url":"https://publish.roblox.com","type":"api","type":"api"},
+    {"name":"Thumbnails API","url":"https://thumbnails.roblox.com","type":"api"}
 ]
