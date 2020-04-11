@@ -9,6 +9,7 @@ async function poll () {
     let response = await axios.get(url).catch(e => e)
     switch(type) {
       case "api":
+        console.log(response.data)
         online = (response.data.message === "OK" ? response.status : false)
       break;
       case "website":
