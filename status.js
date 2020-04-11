@@ -7,6 +7,7 @@ async function poll () {
   status = await Promise.all(servers.map(async ({url, name}) => {
     let response = await rp.head({url, simple: false, resolveWithFullResponse: true, timeout: 5000, time: true, headers: { 'User-Agent': 'github.com/Sazzo/RobloxStatus' }}).catch(e => e)
     let online = (response.body.message === "OK" ? response.elapsedTime : false)
+    console.log(response.body)
     return {url, name, online}
   }))
 }
