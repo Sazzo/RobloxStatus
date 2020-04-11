@@ -3,7 +3,7 @@
     {"name":"Games List","url":"https://games.roblox.com/","type":"api"},
     {"name":"Games Join","url":"https://gamejoin.roblox.com/","type":"api"},
     {"name":"Games Datastore API","url":"https://gamepersistence.roblox.com/","type":"api"},
-    {"name":"Main API","url":"https://api.roblox.com","type":"star"},
+    {"name":"Main API","url":"https://api.roblox.com","type":"api"},
     {"name":"Auth (Sign in, Sign Up)","url":"https://auth.roblox.com","type":"api"},
     {"name":"Devforum","url":"https://devforum.roblox.com/","type":"website"},
     {"name":"Documentation","url":"https://developer.roblox.com","type":"website"},
