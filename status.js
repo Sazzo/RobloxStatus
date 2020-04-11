@@ -15,8 +15,12 @@ async function poll () {
         online = (response.status === 200 ? response.status : false)
       break;
       case "star":
-        online = (response.status === 403 ? response.status : false)
-        console.log(response)
+        // lol, this is bad
+        if(response.status === 403) {
+          online = 200
+        } else {
+          online = false
+        }
       break;
     }
     return {url, name, online, type}
