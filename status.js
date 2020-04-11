@@ -10,7 +10,7 @@ async function poll () {
     switch(type) {
       case "api":
         console.log(response.data)
-        online = (response.data.message === "OK" ? response.status : false)
+        online = false
       break;
       case "website":
         online = (response.status === 200 || response.status === 404 ||response.status === 403 ? response.status : false)
