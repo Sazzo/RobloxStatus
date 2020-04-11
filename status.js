@@ -12,7 +12,7 @@ async function poll () {
         online = (response.data.message === "OK" ? response.status : false)
       break;
       case "website":
-        online = (response.status === 200 || response.status === 404 ||response.status === 403 ? response.status : false)
+        online = (response.status === 200 ? response.status : false)
       break;
       case "star":
         online = (response.status === 403 ? response.status : false)
