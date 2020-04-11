@@ -16,7 +16,7 @@ async function poll () {
       break;
       case "star":
         online = (response.status === 403 ? response.status : false)
-        console.log(response.status)
+        console.log(response)
       break;
     }
     return {url, name, online, type}
