@@ -16,6 +16,7 @@ async function poll () {
       break;
       case "star":
         online = (response.statusText === "Forbidden" ? true : false)
+      break;
     }
     return {url, name, online, type}
   }))
