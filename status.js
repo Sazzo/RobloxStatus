@@ -1,6 +1,7 @@
 const axios = require('axios')
 
 let status = []
+let online = ()
 let servers = require('./servers.json')
 
 async function poll () {
@@ -8,10 +9,10 @@ async function poll () {
     let response = await axios.get(url).catch(e => e)
     if(response.data.message) {
       if(response.data.message === "OK") {
-        return let online = (response.status)
+        return online = (response.status)
       }
     } else {
-    let online = (response.status === "200" || response.status === "404" ? response.status : false)
+    online = (response.status === "200" || response.status === "404" ? response.status : false)
     }
     return {url, name, online}
     
