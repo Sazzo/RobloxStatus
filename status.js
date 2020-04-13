@@ -22,7 +22,7 @@ async function poll () {
       case "website":
         online = (response.status === 200 ? true : false)
         if(online === false) {
-          existLast === true
+          existLast = true
           last = {name, type, time}
         }
       break;
