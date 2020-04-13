@@ -20,4 +20,8 @@ app.get('/json', (req, res) => {
   res.json(status.getStatus())
 })
 
+app.get('/json/incident', (req, res) => {
+  res.json(status.getIncident())
+})
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
