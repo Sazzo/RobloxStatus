@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000
 
 status.start()
 
-var app = express()
+const app = express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .use(cors())
