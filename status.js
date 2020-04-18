@@ -10,6 +10,20 @@ async function poll () {
     switch(type) {
       case "api":
         online = (response.data.message === "OK" || response.statusText === "OK" ? true : false)
+        switch(response.status) {
+          case 403:
+          reason = "Maybe Server Crash"
+          break;
+          case 400:
+          reason = "Server Crash"
+          break;
+          case 408:
+          reason = "Timeout"
+          break;
+          case 429:
+          reason = "Unknown error, please send a DM with a screenshot of this error to sazz#1660 Discord."
+          break;
+         }
       break;
       case "website":
         online = (response.status === 200 ? true : false)
