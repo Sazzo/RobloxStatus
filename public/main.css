@@ -1,0 +1,40 @@
+body {
+        height: 100vh;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #333;
+        color: #bbb;
+      }
+
+      .statuses {
+        padding-bottom: 0.5em;
+      }
+
+      .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .app {
+        text-align: center;
+      }
+
+      .header {
+        color: #ddd;
+        font-weight: bold;
+      }
+
+      .footer {
+        color: #666;
+      }
+
+      .link {
+        text-decoration: underline;
+      }
+
+      .unrelatedNote {
+        font-size: 10px;
+      }

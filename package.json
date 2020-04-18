@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.3.0",
-  "description": "A sample Node.js app using Express 4",
+  "name": "robloxstatus",
+  "version": "1.2.3",
+  "description": "The unofficial page designed to show the current status of the main services of Roblox.",
   "engines": {
     "node": "12.x"
   },
@@ -14,19 +14,14 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "axios": "^0.19.2",
-    "cors":"^2.8.5"
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "tape": "^4.7.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/Sazzo/RobloxStatus"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
   "license": "MIT"
 }

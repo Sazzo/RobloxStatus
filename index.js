@@ -16,8 +16,8 @@ app.get('/', (req, res) => {
   res.render('pages/index', { status: status.getStatus() })
 })
 
-app.get('/json', (req, res) => {
+app.get('/api/v1/statuses', (req, res) => {
   res.json(status.getStatus())
 })
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+app.listen(PORT, () => console.log(`[WEBSERVER] Listening on port ${PORT}`))

@@ -2,10 +2,10 @@ const axios = require('axios')
 
 let status = []
 let servers = require('./servers.json')
-let online = false
+let online = true
 
 async function poll () {
-  status = await Promise.all(servers.map(async ({url, name, type}) => {
+  status = await Promise.all(servers.map(async ({url, name, type, props}) => {
     let response = await axios.get(url).catch(e => e)
     switch(type) {
       case "api":
@@ -13,9 +13,6 @@ async function poll () {
       break;
       case "website":
         online = (response.status === 200 ? true : false)
-      break;
-      case "star":
-        online = true
       break;
     }
     return {url, name, online, type}
