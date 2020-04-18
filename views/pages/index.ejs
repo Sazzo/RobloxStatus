@@ -13,8 +13,8 @@
     <script type="text/javascript">
       setInterval(() => {
         $.get("/api/v1/statuses", (data) => {
-          let html = data.map(({url, name, online}) => {
-            return `<a style="text-decoration: none; color: #bbb" href="${url}"><p>${name}: ${online ? `<span style='color: #70ff8a'>Online</span>` : `<span style='color: #ff7070'>Offline</span>`}</p></a>`
+          let html = data.map(({url, name, online, reason}) => {
+            return `<a style="text-decoration: none; color: #bbb" href="${url}"><p>${name}: ${online ? `<span style='color: #70ff8a'>Online</span>` : `<span style='color: #ff7070'>Offline (Possible Reason: ${reason})</span>`}</p></a>`
           })
           $(".statuses").html(html)
         })
@@ -26,8 +26,9 @@
       <div class="app">
         <h1 class="header">Roblox Status</h1>
         <div class="statuses">
-          <% status.forEach(({url, name, online}) => { %>
-            <a style="text-decoration: none; color: #bbb" href="<%- url %>"><p><%= name %>: <%- online ? `<span style='color: #70ff8a'>Online</span>` : `<span style='color: #ff7070'>Offline</span>` %></p>
+          <% status.forEach(({url, name, online, reason}) => { %>
+            <a style="text-decoration: none; color: #bbb" href="<%- url %>"><p><%= name %>: <%- online ? `<span style='color: #70ff8a'>Online</span>` : `<span style='color: #ff7070'>Offline</span>`%><% if(!online) {%><span style='color: #ff7070'> (Reason: <%- reason %>)</span><% } %></p>
+
             </a>
           <% }) %>
         </div>

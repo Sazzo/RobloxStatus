@@ -1,7 +1,8 @@
 const axios = require('axios')
 let status = []
 const servers = require('./servers.json')
-let online = true
+let online = false
+let reason = "Unknown Reason"
 
 async function poll () {
   status = await Promise.all(servers.map(async ({url, name, type}) => {
@@ -12,9 +13,23 @@ async function poll () {
       break;
       case "website":
         online = (response.status === 200 ? true : false)
+        switch(response.status) {
+          case 403:
+          reason = "Maybe Server Crash"
+          break;
+          case 400:
+          reason = "Server Crash"
+          break;
+          case 408:
+          reason = "Timeout"
+          break;
+          case 429:
+          reason = "Unknown error, please send a DM with a screenshot of this error to sazz#1660 Discord."
+          break;
+        }
       break;
     }
-    return {url, name, online, type}
+    return {url, name, online, type, reason}
   }))
 }
 
