@@ -13,11 +13,9 @@
     <meta content="The unofficial page designed to show the current status of the main services of Roblox." property="og:description">
   </head>
   <script type="text/javascript">
-   // do not redirect if querystring is ?full=true
-    if (navigator.userAgent.includes('Android') || navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('BB')) { // detect mobile browser
-      window.location.replace("https://robloxstatus.sazz.xyz/mobile"); // redirect if mobile browser detected
+    if (navigator.userAgent.includes('Android') || navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('BB')) { 
+      window.location.replace("https://robloxstatus.sazz.xyz/mobile"); 
     }
-  
   </script>
   <body>
     <div class="wrapper">
@@ -27,10 +25,19 @@
          <a href="https://roblox.com" class="nav-item">roblox</a>
       </div>
       <div class="ingeral">
-      <% if(haveOffline) { %>
-      <div class="status offline2">
-          <span class="note">Some things are offline</span>
+      <% if(!haveOffline) { %>
+      <% if(!outage) { %>
+      <div class="status2 offline2">
+          <span class="note">Some services is offline.</span>
         </div>
+      <% } else {%>
+      <div class="status offline2">
+          <span class="note"><%= outage.statusTitle %></span>
+        </div>
+     <div class="container">
+       <span class="description"><%- outage.statusText %><br>Please be patient! Thank you.</span>
+    </div>
+      <% } %>
       <% } else { %>
       <div class="status online2">
           <span class="note">All Systems Operational</span>
@@ -45,7 +52,7 @@
     </div>
     </div>
         <p class="footer">Made with ❤ by FelipeSazz</p>
-         <p class="footer unrelatedNote">This website is unofficial and is not related and/or affiliated in any way to Roblox or the Roblox Corporation.</p>
+         <p class="footer unrelatedNote">This website is unofficial and is not related and/or affiliated in any way to Roblox or the Roblox Corporation. Roblox-related logos and names are the property of Roblox Corporation. All rights reserved.</p>
       </div>
   </body>
 </html>

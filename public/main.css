@@ -10,9 +10,21 @@ body {
 .status {
         border: 1px solid rgba(0,0,0,0.1);
         text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+        border-radius: 4px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        width: 120vh;
         padding: 12px 20px;
+        max-width: 120vw;
+        position: relative;
+      }
+
+      .status2 {
+        border: 1px solid rgba(0,0,0,0.1);
+        text-shadow: 0 1px 0 rgba(0,0,0,0.1);
         border-radius: 4px;
         width: 120vh;
+        padding: 12px 20px;
         max-width: 120vw;
         position: relative;
       }
@@ -24,6 +36,25 @@ body {
         position: relative;
         top: 2px;
       }
+
+      .description {
+        color: #bbb;
+        display: flex;
+        position: relative;
+        margin-right: 234px;
+        justify-content: center;
+      }
+
+      .container {
+        background-color: #2b2a2a;
+        width: 125.2vh;
+        height: 10vh;
+        border-style: solid;
+        border-color: transparent;
+        border-bottom-left-radius: 4px
+        border-bottom-right-radius: 4px;
+      }
+      
 
       .online {
         color: #2fcc66

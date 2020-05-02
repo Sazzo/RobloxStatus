@@ -3,9 +3,9 @@ let status = []
 const servers = require('./servers.json')
 let online = false
 let someOffline = false
-let statusTitle = 'None'
-let statusText = 'None'
-let statusParams = []
+let statusTitle = null
+let statusText = null
+let statusParams = false
 
 async function poll () {
   status = await Promise.all(servers.map(async ({ url, name, type }) => {
@@ -13,13 +13,13 @@ async function poll () {
     switch (type) {
       case 'api':
         online = (!!(response.data.message === 'OK' || response.statusText === 'OK'))
-        if (online == false) {
+        if (online === false) {
           someOffline = true
         }
         break
       case 'website':
         online = (response.status === 200)
-        if (online == false) {
+        if (online === false) {
           someOffline = true
         }
         break
@@ -48,8 +48,24 @@ function outage (outageTitle, outageDescription) {
   return statusParams
 }
 
-function currentOutage () {
-  return statusParams
+function clearOutage () {
+  console.log('ClearOutage started.')
+  setInterval(function () {
+    if (statusParams) {
+      statusParams = false
+      console.log('Set Outage to False.')
+    } else {
+      console.log('No Outage.')
+    }
+  }, 1000 * 60 * 60)
 }
 
-module.exports = { start, getStatus, haveOffline, outage, currentOutage }
+function currentOutage () {
+  if (!statusParams) {
+    return false
+  } else {
+    return statusParams
+  }
+}
+
+module.exports = { start, getStatus, haveOffline, outage, currentOutage, clearOutage }
