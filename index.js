@@ -3,6 +3,7 @@ const path = require('path')
 const status = require('./status.js')
 const cors = require('cors')
 const bodyParser = require('body-parser')
+const MobileDetect = require('mobile-detect')
 const PORT = process.env.PORT || 5000
 
 status.start()
@@ -16,6 +17,11 @@ const app = express()
 
 app.get('/', (req, res) => {
   res.render('pages/index', { status: status.getStatus(), haveOffline: status.haveOffline() })
+  const md = new MobileDetect(req.headers['user-agent'])
+  console.log(req.headers)
+  if (md.mobile()) {
+  	res.redirect('/mobile')
+  }
 })
 
 app.get('/mobile', (req, res) => {
