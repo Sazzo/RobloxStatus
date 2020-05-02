@@ -1,7 +1,6 @@
 const express = require('express')
 const path = require('path')
 const status = require('./status.js')
-const mobile = require('./mobile.js')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 5000
