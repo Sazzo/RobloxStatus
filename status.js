@@ -36,7 +36,7 @@ function start () {
 function getStatus () {
   return status
 }
-
+// ignore this lol
 function haveOffline () {
   return someOffline
 }

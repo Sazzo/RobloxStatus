@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
   res.render('pages/index', { status: status.getStatus(), haveOffline: status.haveOffline() })
 })
 
+app.get('/mobile', (req, res) => {
+  res.render('pages/mobile/index', { status: status.getStatus(), haveOffline: status.haveOffline() })
+})
+
 app.get('/api/v1/statuses', (req, res) => {
   res.json(status.getStatus())
 })

@@ -5,20 +5,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="shortcut icon" href="https://www.roblox.com/favicon.ico">
     <script src="jquery-3.2.1.min.js"></script>
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/main-mobile.css">
     <meta content="Roblox Status" property="og:title">
     <meta http-equiv="cache-control" content="no-cache">
     <meta name="theme-color" content="#e34439">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="The unofficial page designed to show the current status of the main services of Roblox." property="og:description">
   </head>
-  <script type="text/javascript">
-  if(!window.location.search.substring(1) == "full=true") { // do not redirect if querystring is ?full=true
-    if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/WebOs/i)) { // detect mobile browser
-      window.location.replace("https://robloxstatus.sazz.xyz/mobile"); // redirect if mobile browser detected
-    }
-  }
-  </script>
   <body>
     <div class="wrapper">
       <div class="nav">
@@ -39,7 +32,7 @@
       </div>
       <div class="all">
         <% status.forEach(({url, name, online, reason}) => { %>
-       <a style="position: relative; top: 60px; margin-left: 250px; text-decoration: none; color: #bbb" href="<%- url %>"><p><%= name %>: <%- online ? `<span class="online">Online</span>` : `<span class="offline">Offline</span>`%>
+       <a style="position: relative; top: 60px; margin-left: 50px; text-decoration: none; color: #bbb; font-size: 3mm;" href="<%- url %>"><p><%= name %>: <%- online ? `<span class="online">Online</span>` : `<span class="offline">Offline</span>`%>
       <% }) %>
       </div>
     </div>
@@ -49,4 +42,3 @@
       </div>
   </body>
 </html>
-
