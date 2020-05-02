@@ -9,5 +9,7 @@
     {"name":"Catalog API","url":"https://catalog.roblox.com","type":"api"},
     {"name":"Client Settings API","url":"https://clientsettings.roblox.com","type":"api"},
     {"name":"Files Uploads API","url":"https://publish.roblox.com","type":"api"},
-    {"name":"Thumbnails API","url":"https://thumbnails.roblox.com","type":"api"}
+    {"name":"Thumbnails API","url":"https://thumbnails.roblox.com","type":"api"},
+    {"name": "Avatars API","url":"https://avatar.roblox.com","type":"api"},
+    {"name": "Badges API","url":"https://badges.roblox.com ","type":"api"}
 ]

@@ -11,10 +11,11 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "ejs": "^2.5.7",
-    "express": "^4.16.2",
     "axios": "^0.19.2",
-    "cors": "^2.8.5"
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
   },
   "devDependencies": {
     "tape": "^4.7.0"
