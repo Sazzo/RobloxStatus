@@ -17,11 +17,6 @@ const app = express()
 
 app.get('/', (req, res) => {
   res.render('pages/index', { status: status.getStatus(), haveOffline: status.haveOffline() })
-
-  if (mobile.check(req.headers['user-agent'].toLowerCase())) {
- 	res.redirect('/mobile')
- 	console.log('Mobile Detected')
-  }
 })
 
 app.get('/mobile', (req, res) => {
