@@ -26,8 +26,5 @@ Will reply:
 [{"url":"service url","name":"service name","online":true,"type":"service type (like website)","reason":"ignore this, it will be withdrawn soon (="}]
 ```
 
-## Credits
-Currently running on Bee scratch, follow the repository: https://github.com/beescuit/fivemstatus (The V2 of the site will change everything, but for now, it is still running on Bee's code.)
-
 ## Copyright
-This website/repository is unofficial and is not related and/or affiliated in any way to Roblox or the Roblox Corporation.
+This website/repository is unofficial and is not related and/or affiliated in any way to Roblox or the Roblox Corporation. All Roblox-related logos and names are the property of Roblox Corporation. All rights reserved.
