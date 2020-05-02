@@ -1,8 +1,9 @@
 <h1 align="center">📡 Roblox Status</h1>
 <p align="center">
   <strong>The unofficial page designed to show the current status of the main services of Roblox.</strong>
+  <br>
+  <img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg">
 </p>
-
 ## Why?
 Among several companies, like Discord, Github and many others, why doesn't Roblox have a page that shows the status of API's, talks to the user about problems through posts or anything like that? Okay, you can tell me that there are sites that report the status of the website, but there comes a problem, besides being incomplete since it relates about website and not internal services like APIs or even services closer to Roblox like devforum, besides do not have a very good user interface and is based on reports, since nobody has done it, we are here to try to be as accurate as possible and do the work that is not currently done officially by the Roblox platform development team.
 
