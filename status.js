@@ -13,14 +13,18 @@ async function poll () {
     switch (type) {
       case 'api':
         online = (!!(response.data.message === 'OK' || response.statusText === 'OK'))
-        if (online === false) {
+        if (!online) {
           someOffline = true
+        } else {
+          someOffline = false
         }
         break
       case 'website':
-        online = (response.status === 200)
-        if (online === false) {
+        online = (response.status === 200 || response.status === 204 || response.status === 203)
+        if (!online) {
           someOffline = true
+        } else {
+          someOffline = false
         }
         break
     }
