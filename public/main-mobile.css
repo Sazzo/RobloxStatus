@@ -71,7 +71,7 @@ body {
       .footer {
         text-align: center;
         position: relative;
-        bottom: 30px;
+        top: 80px;
       }
 
       .link {
