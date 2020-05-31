@@ -32,7 +32,7 @@
       </div>
       <div class="all">
         <% status.forEach(({url, name, online, reason}) => { %>
-       <a style="position: relative; top: 60px; margin-left: 50px; text-decoration: none; color: #bbb; font-size: 3mm;" href="<%- url %>"><p><%= name %>: <%- online ? `<span class="online">Online</span>` : `<span class="offline">Offline</span>`%>
+       <a style="position: relative; top: 60px; margin-left: 50px; text-decoration: none; color: #bbb; font-size: 3mm;" href="<%- url %>"><p><%= name %>: <%- online ? `<span class="online">Online</span>` : `<span class="offline">Offline</span>`%></a>
       <% }) %>
       </div>
     </div>

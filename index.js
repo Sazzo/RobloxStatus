@@ -23,15 +23,15 @@ app.get('/mobile', (req, res) => {
   res.render('pages/mobile/index', { status: status.getStatus(), haveOffline: status.haveOffline() })
 })
 
-app.get('/api/v1/statuses', (req, res) => {
+app.get('/api/v1/all', (req, res) => {
   res.json(status.getStatus())
 })
 
-app.get('/api/v1/geral', (req, res) => {
+app.get('/api/v1/offline', (req, res) => {
   res.json(status.haveOffline())
 })
 
-app.get('/api/v1/currentOutage', (req, res) => {
+app.get('/api/v1/outage', (req, res) => {
   console.log(status.currentOutage())
   if (!status.currentOutage()) {
   	res.json({
@@ -50,7 +50,7 @@ app.post('/api/v1/publish', (req, res) => {
   	status.clearOutage()
   } else {
   	res.json({
-  		message: 'Invalid.'
+  		message: 'Invalid Secret Key.'
   	})
   }
 })
