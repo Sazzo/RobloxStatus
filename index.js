@@ -1,13 +1,13 @@
 const express = require('express')
 const path = require('path')
-const status = require('./status.js')
+// const status = require('./status.js')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 5000
-
+/*
 status.start()
 status.clearOutage()
-
+*/
 const app = express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -16,9 +16,9 @@ const app = express()
   .use(bodyParser.json())
 
 app.get('/', (req, res) => {
-  res.render('pages/index', { status: status.getStatus(), haveOffline: status.haveOffline(), outage: status.currentOutage() })
+  res.render('pages/shutdown')
 })
-
+/* 
 app.get('/mobile', (req, res) => {
   res.render('pages/mobile/index', { status: status.getStatus(), haveOffline: status.haveOffline() })
 })
@@ -54,4 +54,5 @@ app.post('/api/v1/publish', (req, res) => {
   	})
   }
 })
+*/
 app.listen(PORT, () => console.log(`[WEBSERVER] Listening on port ${PORT}`))

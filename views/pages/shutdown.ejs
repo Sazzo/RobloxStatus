@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roblox Status</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.roblox.com/favicon.ico">
+    <script src="jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <meta content="Roblox Status" property="og:title">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="theme-color" content="#e34439">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="The unofficial page designed to show the current status of the main services of Roblox." property="og:description">
+  </head>
+  <body>
+    <script>
+    let seconds = 10
+      setInterval(() => {
+        if (seconds === 0) window.location = 'https://roblox.status.io/'
+        seconds -= 1
+      }, 1000)
+    </script>
+    <div class="wrapper">
+      <div class="nav">
+        <a href="https://roblox.com"><img src="silverlogo.png" class="nav-brand"></a>
+        <a href="https://github.com/Sazzo/RobloxStatus/" class="nav-item">github</a>
+         <a href="https://roblox.com" class="nav-item">roblox</a>
+      </div>
+      <div class="message">
+        <h3 class="mTitle">This website is discontinued as Roblox has now created an official status page.</h3>
+        <h4 class="mRedirect">Sending you in 10 seconds.</h4>
+        <p class="mSubtitle">Goodbye!</p>
+      </div>
+      </div>
+  </body>
+</html>
+
