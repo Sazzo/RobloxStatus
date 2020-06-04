@@ -4,9 +4,10 @@
   <br>
   <img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg"></img>
 </p>
+PS: This website is discontinued as Roblox has now created an official status page. Take a look here
 
 ## Why?
-Among several companies, like Discord, Github and many others, why doesn't Roblox have a page that shows the status of API's, talks to the user about problems through posts or anything like that? Okay, you can tell me that there are sites that report the status of the website, but there comes a problem, besides being incomplete since it relates about website and not internal services like APIs or even services closer to Roblox like devforum, besides do not have a very good user interface and is based on reports, since nobody has done it, we are here to try to be as accurate as possible and do the work that is not currently done officially by the Roblox platform development team.
+Among several companies, like Discord, Github and many others, why doesn't Roblox have a page that shows the status of API's, talks to the user about problems through posts or anything like that? Okay, you can tell me that there are sites that report the status of the website, but there comes a problem, besides being incomplete since it relates about website and not internal services like APIs or even services closer to Roblox like devforum, besides do not have a very good user interface and is based on reports, since nobody has done it, we are here to try to be as accurate as possible ~~and do the work that is not currently done officially by the Roblox platform development team.~~
 
 ## How to contribute to development?
 It's simple, follow the Standard code style and show why you want it to be added, if it's a bug fix just show a screenshot and steps for it to happen. Fork our project and give your fork a `` git clone``, after that, just send a pull request here.
